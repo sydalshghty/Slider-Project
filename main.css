@@ -1,0 +1,109 @@
+:root{
+    --First-Color: rgb(254, 198, 0);
+    --Second-Color: #FFF8D2;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Slider-Container{
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Slider-Container .container{
+    position: relative;
+}
+.Slider-Container .container img{
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+}
+.Slider-Container .container img.active{
+    opacity: 1;
+}
+.Slider-Container .container .number-Slide{
+    position: absolute;
+    z-index: 1;
+    left: 5%;
+    margin-top: 10px;
+    background-color: var(--Second-Color);
+    padding: 10px 30px;
+    color: #42446c;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+.Slider-Container .container .Slider-Controls{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 230px;
+    transform: translate(0, 100%);
+    -webkit-transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+}
+.Slider-Container .container .Slider-Controls .prev,
+.Slider-Container .container .Slider-Controls .next{
+    display: block;
+    height: 10%;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    color: #42446c;
+    background-color: var(--Second-Color);
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.Slider-Container .container .Slider-Controls .prev.disabled,
+.Slider-Container .container .Slider-Controls .next.disabled{
+    cursor: no-drop;
+    background-color: #fefae8;
+}
+.Slider-Container .container .Slider-Controls .next{
+    margin-left: 60px;
+}
+.Slider-Container .container .Slider-Controls .indicators{
+    display: inline-block;
+}
+.Slider-Container .container .Slider-Controls .indicators ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.Slider-Container .container .Slider-Controls .indicators ul li{
+    background-color: #f6f6f6;
+    padding: 5px 7px;
+    color: #42446c;
+    cursor: pointer;
+    margin-top: -10px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.Slider-Container .container .Slider-Controls .indicators ul li.active{
+    background-color: var(--Second-Color);
+}
